@@ -1,3 +1,13 @@
+/* There is 8px between the edge of the card and its content (the blue sections).
+There is an 8px gap between each of the blue sections inside the card.
+The title of the card uses a 16px font.
+There are 8px between the title text and the edge of the title section.
+The content section has 16px space on the top and bottom, and 8px on either side.
+Everything inside the .button-container section is centered, and there is 8px padding.
+The Big Button is centered on its own line.
+The Big Button has 24px space on the sides, and 8px on top and bottom. */
+
+
 body {
   background: #eee;
   font-family: sans-serif;
@@ -6,22 +16,48 @@ body {
 .card {
   width: 400px;
   background: #fff;
+  padding: 8px;
   margin: 16px auto;
 }
 
+
 .title {
   background: #e3f4ff;
+  font-size: 16px;
+  margin: 8px;
+  padding: 8px;
 }
 
 .content {
   background: #e3f4ff;
+  margin: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .button-container {
   background: #e3f4ff;
+  margin: 8px;
+  padding: 8px;
+  text-align: center;
 }
+
+/* 
+
+- `margin: 0 auto;` means that the vertical margins (top and bottom) 
+are set to `0` 
+!!!!!
+- The `auto` part of the margin applies to the left and right margins. 
+In this case, `auto` makes the browser automatically calculate the left 
+and right margins equally, effectively centering the button horizontally.
+*/
 
 button {
   background: white;
+  display: block;
   border: 1px solid #eee;
+  padding: 8px 24px;
+  margin: 0 auto;
 }
